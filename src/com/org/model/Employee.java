@@ -2,6 +2,7 @@ package com.org.model;
 
 public class Employee {
 	private String name;
+	private Integer age;
 	private Double salary;
 	private String deptName;
 
@@ -24,6 +25,14 @@ public class Employee {
 
 	public String getName() {
 		return name;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public void setSalary(Double salary) {
