@@ -12,7 +12,12 @@ public class NewWorkStealingPoolTest {
 		int availableProcessors = Runtime.getRuntime().availableProcessors();
 		ExecutorService executorService = Executors.newWorkStealingPool(availableProcessors);
 
-		List<Callable<String>> tasks = Arrays.asList(() -> "My Task1", () -> "My Task2", () -> "My Task3", () -> "My Task4");
+		Callable<String> c1 = () -> "My Task1";
+		Callable<String> c2 = () -> "My Task2";
+		Callable<String> c3 = () -> "My Task3";
+		Callable<String> c4 = () -> "My Task4";
+		
+		List<Callable<String>> tasks = Arrays.asList(c1, c2, c3, c4);
 
 		executorService.invokeAll(tasks).stream().map(future -> {
 			try {
