@@ -12,11 +12,11 @@ public class Test {
 		List<Integer> numbers = Arrays.asList(4, 9, 25, 36, 100);
 		numbers.forEach(System.out::println);
 		System.out.println("-----------------------");
-		List<Double> squaredNumbers = Test.findSquare(numbers, Integer::new);
+		List<Double> squaredNumbers = Test.findSquare(numbers, Double::new);
 		System.out.println(squaredNumbers);
 	}
 
-	private static List<Double> findSquare(List<Integer> numbers, Function<Integer, Integer> f) {
+	private static List<Double> findSquare(List<Integer> numbers, Function<Integer, Double> f) {
 		List<Double> result = new ArrayList<>();
 		numbers.forEach(x -> result.add(Math.sqrt(f.apply(x))));
 		return result;
