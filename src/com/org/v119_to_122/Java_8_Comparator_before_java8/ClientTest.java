@@ -1,13 +1,12 @@
-package com.org.v119_to_120.Java_8_Comparator_before_java8;
+package com.org.v119_to_122.Java_8_Comparator_before_java8;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import com.org.model.Employee;
 
-public class ClientTest2 {
+public class ClientTest {
 
 	public static void main(String[] args) {
 		
@@ -25,18 +24,11 @@ public class ClientTest2 {
 		
 		System.out.println("-----------------------------------------");
 		
-		Collections.sort(empList, new Comparator<Employee>() {
-			@Override
-			public int compare(Employee e1, Employee e2) {
-				return e1.getName().compareTo(e2.getName());
-			}
-		});
+		Collections.sort(empList, new EmployeeNameSorter());
 		System.out.println("After sorting::::");
 		for (Employee employee : empList) {
 			System.out.println(employee);
 		}
-		
-		Collections.sort(empList, (e1, e2) -> e1.getName().compareTo(e2.getName()));
 		
 	}
 }

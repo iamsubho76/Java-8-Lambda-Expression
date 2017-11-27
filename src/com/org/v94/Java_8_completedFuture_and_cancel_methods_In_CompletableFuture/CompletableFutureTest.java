@@ -10,7 +10,5 @@ public class CompletableFutureTest {
 		CompletableFuture<String> completedFuture = CompletableFuture.completedFuture("Hello World!!!");
 		String result = completedFuture.get();
 		System.out.println(result);
-		
 	}
-
 }

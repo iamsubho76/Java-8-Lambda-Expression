@@ -1,4 +1,4 @@
-package com.org.v119_to_120.Java_8_Comparator_before_java8;
+package com.org.v119_to_122.Java_8_Comparator_before_java8;
 
 import java.util.Comparator;
 

@@ -12,6 +12,13 @@ public class Employee {
 		this.salary = (double) salary;
 	}
 
+	public Employee(String name, Integer age, String deptName) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.deptName = deptName;
+	}
+
 	public Employee(String name, Double salary, String deptName) {
 		super();
 		this.name = name;
@@ -49,7 +56,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", salary=" + salary + ", deptName="
-				+ deptName + "]";
+		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary
+				+ ", deptName=" + deptName + "]";
 	}
 }

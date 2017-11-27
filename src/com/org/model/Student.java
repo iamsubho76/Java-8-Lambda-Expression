@@ -2,7 +2,7 @@ package com.org.model;
 
 import java.util.function.Function;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	private String name;
 	private int age;
 
@@ -27,5 +27,10 @@ public class Student {
 	
 	public String customShow(Function<Student, String> function){
 		return function.apply(this);
+	}
+
+	@Override
+	public int compareTo(Student st) {
+		return this.getName().compareTo(st.getName());
 	}
 }

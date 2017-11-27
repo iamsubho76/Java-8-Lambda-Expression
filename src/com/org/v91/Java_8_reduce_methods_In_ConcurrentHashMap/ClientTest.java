@@ -11,7 +11,7 @@ public class ClientTest {
 		map.put("Frank", "Us");
 		map.put("Martin", "Germany");
 		
-		String reduce = map.reduce(2, (k,v)->k+"-"+v, (r1,r2)->r1+","+r2);
+		String reduce = map.reduce(2, (k,v)->k+"-"+v, (r1,r2)->r1+"++++++"+r2);
 		System.out.println(reduce);
 		
 		System.out.println("----------------------------------------------");

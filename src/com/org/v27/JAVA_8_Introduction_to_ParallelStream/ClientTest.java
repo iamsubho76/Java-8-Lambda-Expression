@@ -21,12 +21,12 @@ public class ClientTest {
 
 		 Stream<Student> parallelStream = list.parallelStream();
 		 System.out.println("Students data send for processing in unorder:::");
-		 parallelStream.forEach(s->doProcess(s));
+		 parallelStream.forEach(ClientTest::doProcess);
 		 
 		 
 		 Stream<Student> parallelStream2 = list.parallelStream();
 		 System.out.println("Students data send for processing in inorder:::");
-		 parallelStream2.forEachOrdered(System.out::println);
+		 parallelStream2.forEachOrdered(ClientTest::doProcess);
 	}
 
 	private static void doProcess(Student s) {

@@ -12,6 +12,9 @@ public class MyImplementation implements Interface1, Interface2{
 	
 	public static void main(String[] args) {
 		MyImplementation mi = new MyImplementation();
-		mi.display();
+		//mi.display();
+		if(Integer.toString(15).indexOf("5") != -1){
+            System.out.print("Fuzz");
+		}
 	}
 }

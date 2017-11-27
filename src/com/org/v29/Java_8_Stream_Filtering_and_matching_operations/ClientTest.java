@@ -30,5 +30,9 @@ public class ClientTest {
 
 		boolean anyMatch2 = list.stream().anyMatch(s -> s.getAge() > 32);
 		System.out.println(anyMatch2);
+		
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		Stream.iterate(40, n->n+2).limit(10).forEach(System.out::println);;
 	}
 }
